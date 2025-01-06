@@ -13,6 +13,8 @@ import { SendEmailComponent } from './admin/send-email/send-email.component';
 import { EditDoctorComponent } from './admin/edit-doctor/edit-doctor.component';
 import { ArchiveComponent } from './admin/archive/archive.component';
 import { EditArchiveComponent } from './admin/edit-archive/edit-archive.component';
+import { SuccesComponent } from './succes/succes.component';
+import { SuccessEmailComponent } from './admin/success-email/success-email.component';
 
 const routes: Routes = [
   {path:'', component:IndexComponent},
@@ -32,6 +34,8 @@ const routes: Routes = [
   {path:'archive', component:ArchiveComponent},
   {path:'edit-archive', component:EditArchiveComponent},
   {path:'edit-archive/:id', component:EditArchiveComponent},
+  {path:'succes-rendez-vous', component:SuccesComponent},
+  {path:'succes-email', component:SuccessEmailComponent},
 ];
 
 @NgModule({

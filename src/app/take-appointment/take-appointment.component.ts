@@ -34,7 +34,7 @@ apointmentForm!:FormGroup
       this.appointmentService.appointment(this.apointmentForm.value).subscribe(
         (data)=>{
           console.log(data.message);
-          
+          location.replace('succes-rendez-vous')      
         }
       )
     }

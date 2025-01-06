@@ -21,6 +21,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { EditDoctorComponent } from './admin/edit-doctor/edit-doctor.component';
 import { ArchiveComponent } from './admin/archive/archive.component';
 import { EditArchiveComponent } from './admin/edit-archive/edit-archive.component';
+import { SuccesComponent } from './succes/succes.component';
+import { SuccessEmailComponent } from './admin/success-email/success-email.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { EditArchiveComponent } from './admin/edit-archive/edit-archive.componen
     EditDoctorComponent,
     ArchiveComponent,
     EditArchiveComponent,
+    SuccesComponent,
+    SuccessEmailComponent,
   ],
   imports: [
     BrowserModule,

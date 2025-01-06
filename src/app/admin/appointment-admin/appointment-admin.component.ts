@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { AppointmentService } from 'backend/services/appointment/appointment.service';
 declare function swipe(): void
 declare function FilterkeyWord(): void
+declare function classement(): void
+declare function FilterkeyWord2(): void
 @Component({
   selector: 'app-appointment-admin',
   templateUrl: './appointment-admin.component.html',
@@ -20,6 +22,8 @@ export class AppointmentAdminComponent implements OnInit {
   ngOnInit(): void {
     swipe()
     FilterkeyWord()
+    classement()
+    FilterkeyWord2()
 
     this.appointmentService.getAppointment().subscribe(
       (data) => {
@@ -64,6 +68,7 @@ export class AppointmentAdminComponent implements OnInit {
   editDoctor(id:any){
     this.router.navigate([`edit-doctor/${id}`])
   }
+  
 }
 
 

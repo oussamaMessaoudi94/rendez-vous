@@ -53,15 +53,15 @@
       <!-- Tab 2 Content  -->
       <div class="page-content tab2">
         <div class="container">
-          <input type="text" id="search_input" onkeyup="FilterkeyWord()"
+          <input type="text" id="search_input2" onkeyup="FilterkeyWord2()"
  style="margin-bottom: 16px;" placeholder="Search Name Column.." class="">
-            <table  class="rwd-table" id="menu_item_table" >
-              <tbody id="paginatedTable">
+            <table  class="rwd-table" id="menu_item_table_all" id="rankingTable">
+              <tbody id="paginatedTable" >
                 <tr >
                   <th>Name/Prenom</th>
                   <th>Email</th>
                   <th>Number</th>
-                  <th>Date</th>
+                  <th >Date</th>
                   <th>Heure</th>
                   <th>Action</th>
                 </tr>
@@ -75,7 +75,7 @@
                   <td data-th="Invoice Number">
                     {{apps.number}}
                   </td>
-                  <td data-th="Invoice Number">
+                  <td >
                     {{apps.date}}
                   </td>
                   <td data-th="Invoice Number" id="time">

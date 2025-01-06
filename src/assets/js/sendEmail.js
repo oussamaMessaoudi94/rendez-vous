@@ -4,6 +4,7 @@ function sendEmail() {
     const message = document.querySelector('.message');
     const submit = document.querySelector('.submit');
     const mail_data = document.querySelector('.mail-data');
+    document.querySelector('.mail-data').style.color = "red"
     mail_data.innerHTML = '';
     
     submit.onclick = () => {
@@ -25,10 +26,13 @@ function sendEmail() {
             }).then(response => response.json()).then(data => {
                 
                 if (data.result == 'success') {
-                    mail_data.innerHTML = `Email was successfully sent to ${data.email_to}<br>` + mail_data.innerHTML;
+                    // mail_data.innerHTML = `Email was successfully sent to ${data.email_to}<br>` + mail_data.innerHTML;
+                    // mail_data.style.color='red'          
+                    location.replace('succes-email')     
                 }
                 else
                     mail_data.innerHTML = 'Error sending an email!<br>' + mail_data.innerHTML;
+                    mail_data.style.color='red' 
     
             })
         }
