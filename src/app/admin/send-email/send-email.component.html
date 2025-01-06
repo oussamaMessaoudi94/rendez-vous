@@ -1,0 +1,19 @@
+<app-nav-admin></app-nav-admin>
+
+<form class="post-form" aria-label="send email" role="form">
+    <label for="email">Email To:</label>
+    <input type="email" class="email" id="email" [(ngModel)]="finded.email" [ngModelOptions]="{standalone: true}">
+
+    <label for="subject">Subject:</label>
+    <input type="text" class="subject" id="subject" value="rendez-vous" required>
+
+    <label for="message">Message:</label>
+    <textarea class="message" id="message" value="Mr {{finded.nameP}} accepted votre rendez vous le {{finded.date}} a {{finded.time}}" required></textarea>
+
+    <input type="submit" class="submit" value="Send">
+</form>
+
+<div class="mail-data"></div>
+
+
+

@@ -1,0 +1,32 @@
+<app-nav-admin></app-nav-admin>
+<main>
+    <div class="container" >
+        <h2>Notes Doctor</h2>
+        <form action="#" method="post" class="appointment-form" [formGroup]="noteForm">
+            <label for="name">Nom et Prénom:</label>
+            <input type="text" id="name" name="name"  [(ngModel)]="finded.nameP" [ngModelOptions]="{standalone: true}">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"  [(ngModel)]="finded.email" [ngModelOptions]="{standalone: true}"  required>
+
+            <label for="phone">Numéro de téléphone:</label>
+            <input type="tel" id="phone" name="phone"  [(ngModel)]="finded.number" [ngModelOptions]="{standalone: true}" required>
+
+            <label for="phone">Date du rendez-vous:</label>
+            <input id="date1"  placeholder="MM/DD/YYYY"  [(ngModel)]="finded.date" [ngModelOptions]="{standalone: true}" required="required" >
+
+            <label for="time">Heure du rendez-vous:</label>
+            <select id="time" name="time"   required="required">
+               <option value="">{{finded.time}}</option> <!-- Time options will be populated here by JavaScript -->
+            </select>
+
+            <label for="valide">Notes:</label>
+            <textarea name="" id="" rows="10" formControlName="notes" required="required"></textarea>
+          
+
+
+            <button type="submit" style="margin-top: 5px;" (click)="valideNotes(noteForm.value)">Confirmer Rendez-Vous</button>
+        </form>
+    </div>
+    
+</main>

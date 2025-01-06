@@ -1,0 +1,34 @@
+<app-nav-admin></app-nav-admin>
+<main>
+    <div class="container" >
+        <h2>Confirmation un rendez-vous</h2>
+        <form action="#" method="post" class="appointment-form">
+            <label for="name">Nom et Prénom:</label>
+            <input type="text" id="name" name="name"  [(ngModel)]="finded.nameP" [ngModelOptions]="{standalone: true}"> required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"  [(ngModel)]="finded.email" [ngModelOptions]="{standalone: true}"  required>
+
+            <label for="phone">Numéro de téléphone:</label>
+            <input type="tel" id="phone" name="phone"  [(ngModel)]="finded.number" [ngModelOptions]="{standalone: true}" required>
+
+            <label for="phone">Date du rendez-vous:</label>
+            <input id="date1"  placeholder="MM/DD/YYYY"  [(ngModel)]="finded.date" [ngModelOptions]="{standalone: true}" required="required" >
+
+            <label for="time">Heure du rendez-vous:</label>
+            <select id="time" name="time"   required="required">
+               <option value="">{{finded.time}}</option> <!-- Time options will be populated here by JavaScript -->
+            </select>
+
+            <label for="valide">Validation:</label>
+            <select  name="time"  required="required" [(ngModel)]="finded.valide" [ngModelOptions]="{standalone: true}">
+               <option valued="" >attente!</option>
+               <option valued="validé" style="color: green;">validé</option> <!-- Time options will be populated here by JavaScript -->
+            </select>
+
+
+            <button type="submit" (click)="validate(finded._id)">Confirmer Rendez-Vous</button>
+        </form>
+    </div>
+    
+</main>

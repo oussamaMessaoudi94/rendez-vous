@@ -1,0 +1,28 @@
+<header class="clearfix">
+    <div class="container">
+        <div class="logo">
+            <div class="doctor-name">Dr. Oussama</div>
+            <div class="tagline">Better call oussama</div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+        <div class="container">
+
+        </div>
+    </nav>
+</header>
+<div class="login-container">
+    <h2>Rendez-vous Doctor Login</h2>
+    <form action="your-backend-login-url" method="POST" [formGroup]="loginForm">
+        <label for="email">Email or Username</label>
+        <input type="text" id="email" name="email" required placeholder="Enter your email or username" formControlName="email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your password" formControlName="password">
+
+        <input type="submit" value="Login" (click)="login()">
+    </form>
+    <div class="forgot-password">
+        <p><a href="forgot-password.html">Forgot Password?</a></p>
+    </div>
+</div>

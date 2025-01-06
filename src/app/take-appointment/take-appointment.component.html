@@ -1,0 +1,42 @@
+<app-nav></app-nav>
+<main>
+    <div class="container" >
+        <h2>Prendre un rendez-vous</h2>
+        <form action="#" method="post" class="appointment-form" [formGroup]="apointmentForm">
+            <label for="name">Nom et Prénom:</label>
+            <input type="text" id="name" name="name" formControlName="nameP" required>
+            <div *ngIf="apointmentForm.controls['nameP'].invalid && (apointmentForm.controls['nameP'].dirty || apointmentForm.controls['nameP'].touched)">
+                <div *ngIf="apointmentForm.controls['nameP'].errors?.['required']" style="color: red;">name and last name empty</div>
+            </div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" formControlName="email" required>
+            <div *ngIf="apointmentForm.controls['email'].invalid && (apointmentForm.controls['email'].dirty || apointmentForm.controls['email'].touched)">
+                <div *ngIf="apointmentForm.controls['email'].errors?.['email']" style="color: red;">email is incorrect</div>
+            </div>
+
+            <label for="phone">Numéro de téléphone:</label>
+            <input type="tel" id="phone" name="phone" formControlName="number" required>
+            <div *ngIf="apointmentForm.controls['number'].invalid && (apointmentForm.controls['number'].dirty || apointmentForm.controls['number'].touched)">
+                <div *ngIf="apointmentForm.controls['number'].errors?.['required']" style="color: red;">number is empty</div>
+            </div>
+
+            <label for="phone">Date du rendez-vous:</label>
+            <input id="date1"  placeholder="MM/DD/YYYY" formControlName="date" required="required" >
+            <div *ngIf="apointmentForm.controls['date'].invalid && (apointmentForm.controls['date'].dirty || apointmentForm.controls['date'].touched)">
+                <div *ngIf="apointmentForm.controls['date'].errors?.['required']" style="color: red;">date is empty</div>
+            </div>
+
+            <label for="time">Heure du rendez-vous:</label>
+            <select id="time" name="time"  formControlName="time" required="required">
+               <option value="">--:--</option> <!-- Time options will be populated here by JavaScript -->
+            </select>
+            <div *ngIf="apointmentForm.controls['time'].invalid && (apointmentForm.controls['time'].dirty || apointmentForm.controls['time'].touched)">
+                <div *ngIf="apointmentForm.controls['time'].errors?.['required']" style="color: red;">time is empty</div>
+            </div>
+
+            <button type="submit" (click)="apointment(apointmentForm.value)">Prendre Rendez-Vous</button>
+        </form>
+    </div>
+    
+</main>
