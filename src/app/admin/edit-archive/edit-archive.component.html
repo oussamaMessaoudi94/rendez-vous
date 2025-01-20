@@ -16,9 +16,7 @@
             <input id="date1"  placeholder="MM/DD/YYYY"  [(ngModel)]="findedId.date" [ngModelOptions]="{standalone: true}" required="required" >
 
             <label for="time">Heure du rendez-vous:</label>
-            <select id="time" name="time"   required="required">
-               <option value="">{{findedId.time}}</option> <!-- Time options will be populated here by JavaScript -->
-            </select>
+            <input id="time" name="time" [(ngModel)]="findedId.time"   required="required">
 
             <label for="valide">Notes:</label>
             <textarea name="" id="" rows="10"  [(ngModel)]="findedId.notes" [ngModelOptions]="{standalone: true}"></textarea><br>
